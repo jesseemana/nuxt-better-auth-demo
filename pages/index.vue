@@ -1,5 +1,22 @@
 <script setup lang='ts'>
 import { signIn } from '~/lib/auth-client'
+
+useHead({ title: 'Home' })
+
+// const { getSession } = useAuth()
+// const session = await getSession()
+
+// if (session) {
+//   if (
+// 	session.token.access_token &&
+// 	session.groups
+//   ) {
+// 	localStorage.setItem(
+// 	  'groups',
+// 	  session.groups.map(group => group.id).toString()
+//   	)
+//   }
+// }
 </script>
 
 <template>
