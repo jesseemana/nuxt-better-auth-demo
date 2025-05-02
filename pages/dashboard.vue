@@ -22,26 +22,26 @@ const access_token = config.ACCESS_TOKEN
 
 // console.log(access_token.value)
 
-const getSecurityGroups = async () => {
-  try {
-    const response = await axios.get('https://graph.microsoft.com/v1.0/me/memberOf', {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      }
-    })
-    const results = response.data
-    console.log(results)
-    // session.groups = results.value.map(group => ({
-    //   id: group.id,
-    //   displayName: group.displayName
-    // }))
-  } catch (error) {
-    // @ts-ignore
-    console.error(`Failed to get users' security groups.`, error.message)
-  }
-}
+// const getSecurityGroups = async () => {
+//   try {
+//     const response = await axios.get('https://graph.microsoft.com/v1.0/me/memberOf', {
+//       headers: {
+//         Authorization: `Bearer ${access_token}`,
+//       }
+//     })
+//     const results = response.data
+//     console.log(results)
+//     // session.groups = results.value.map(group => ({
+//     //   id: group.id,
+//     //   displayName: group.displayName
+//     // }))
+//   } catch (error) {
+//     // @ts-ignore
+//     console.error(`Failed to get users' security groups.`, error.message)
+//   }
+// }
 
-onMounted(() => { getSecurityGroups() })
+// onMounted(() => { getSecurityGroups() })
 
 // try {
 //   const response = await axios.get<SecurityGroupResponse>('https://graph.microsoft.com/v1.0/me/memberOf', {
